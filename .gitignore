@@ -1,0 +1,6 @@
+work/
+*.ini
+*.cfg
+*.iso
+*.squashfs
+.vscode/

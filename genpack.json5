@@ -1,0 +1,99 @@
+{
+    "name":"vpnhub",
+    "outfile":"vpnhub.squashfs",
+    "compression":"xz",
+    "packages":[
+        "genpack/sakuravps",
+        "net-im/slack-send-message",
+        "app-arch/lz4",
+        "app-arch/zip",
+        "app-crypt/easy-rsa",
+        "app-editors/bvi",
+        "app-containers/docker",
+        "dev-vcs/git",
+        "net-dialup/ppp",
+        "net-dns/dnsmasq",
+        "net-libs/nodejs",
+        "net-misc/dhcpcd",
+        "net-misc/ntp",
+        "net-misc/s3cmd",
+        "net-vpn/openvpn",
+        "sys-block/zram-init",
+        "sys-fs/inotify-tools",
+        "sys-fs/lvm2",
+        "sys-fs/squashfs-tools",
+
+        "www-servers/nginx",
+        "net-misc/geoipupdate",
+        "www-apache/mod_maxminddb",
+        "www-apache/mod_authnz_external",
+        "dev-lua/luajson",
+        "dev-lua/luasec",
+
+        "app-crypt/certbot",
+        "dev-python/mock",
+        "dev-python/pip",
+        "dev-python/google-api-python-client",
+        "dev-python/beautifulsoup4", // for geoipsets
+
+        "dev-python/twisted",
+
+        "dev-db/mysql",
+        "dev-db/mysql-init-scripts",
+        "dev-python/mysqlclient",
+
+        "dev-python/pyinotify",
+
+        "net-vpn/wireguard-tools",
+        "mail-mta/postfix",
+        "mail-filter/opendkim",
+        "app-admin/logrotate",
+
+        "dev-libs/iniparser",
+        "net-vpn/pptpd",
+        "sys-auth/pam_mysql",
+        "net-ftp/vsftpd",
+        "net-fs/nfs-utils",
+        "app-misc/mosquitto",
+        "www-servers/civetweb",
+        "app-backup/borgbackup",
+
+        // for wg-walbrix
+        "dev-libs/yajl",
+
+        // for zabbix-server
+        "dev-lang/php",
+        "dev-db/mysql",
+        "app-arch/rpm2targz",
+        "net-libs/libssh", // for rpm
+        "dev-db/unixODBC", // for rpm
+        "sys-libs/openipmi", // for rpm
+        "net-nds/openldap", // for rpm
+        "media-fonts/vlgothic"
+    ],
+    "buildtime-packages":[
+        "app-arch/deb2targz"
+    ],
+    "accept_keywords":{
+        "net-analyzer/snort": null,
+    },
+    "use":{
+        "net-firewall/nftables": "json python xtables",
+        "sys-libs/zlib": "minizip",
+        "sys-boot/grub": "GRUB_PLATFORMS: efi-32",
+        "net-analyzer/zabbix": "-postgres curl proxy sqlite",
+        "app-misc/mime-types": "nginx",
+        "dev-lang/php": "apache2 bcmath truetype xmlreader gd sysvipc sockets xmlwriter mysqli fpm gd mysql xslt zip pdo pcntl sysvipc curl sqlite sharedmem tidy exif -cjk intl ldap ftp gmp imap",
+        "app-eselect/eselect-php": "fpm apache2",
+        "www-servers/apache": "APACHE2_MODULES: http2 proxy proxy_connect proxy_http remoteip",
+        "media-libs/gd": "truetype",
+        "net-analyzer/fping": "suid"
+    },
+    "users":[
+    ],
+    "license":{
+        "net-analyzer/fping": "fping"
+    },
+    "services":[]
+}
+// genpack-install --cdrom vpnhub.iso --system-cfg=cfgfile.cfg --system-ini=inifile.ini vpnhub.squashfs
