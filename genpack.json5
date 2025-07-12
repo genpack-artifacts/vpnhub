@@ -87,7 +87,8 @@
         "app-eselect/eselect-php": "fpm apache2",
         "www-servers/apache": "APACHE2_MODULES: http2 proxy proxy_connect proxy_http remoteip",
         "media-libs/gd": "truetype",
-        "net-analyzer/fping": "suid"
+        "net-analyzer/fping": "suid",
+        "net-libs/nodejs": "npm"
     },
     license:{
         "net-analyzer/fping": "fping"
