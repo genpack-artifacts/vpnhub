@@ -1,8 +1,8 @@
 {
-    "name":"vpnhub",
-    "outfile":"vpnhub.squashfs",
-    "compression":"xz",
-    "packages":[
+    name:"vpnhub",
+    outfile:"vpnhub.squashfs",
+    compression:"xz",
+    packages:[
         "genpack/sakuravps",
         "net-im/slack-send-message",
         "app-arch/lz4",
@@ -34,7 +34,7 @@
         "dev-python/mock",
         "dev-python/pip",
         "dev-python/google-api-python-client",
-        "dev-python/beautifulsoup4", // for geoipsets
+        "net-firewall/geoipsets",
 
         "dev-python/twisted",
 
@@ -71,13 +71,13 @@
         "net-nds/openldap", // for rpm
         "media-fonts/vlgothic"
     ],
-    "buildtime-packages":[
+    buildtime_packages:[
         "app-arch/deb2targz"
     ],
-    "accept_keywords":{
+    accept_keywords:{
         "net-analyzer/snort": null,
     },
-    "use":{
+    use:{
         "net-firewall/nftables": "json python xtables",
         "sys-libs/zlib": "minizip",
         "sys-boot/grub": "GRUB_PLATFORMS: efi-32",
@@ -89,11 +89,9 @@
         "media-libs/gd": "truetype",
         "net-analyzer/fping": "suid"
     },
-    "users":[
-    ],
-    "license":{
+    license:{
         "net-analyzer/fping": "fping"
     },
-    "services":[]
+    services:[]
 }
 // genpack-install --cdrom vpnhub.iso --system-cfg=cfgfile.cfg --system-ini=inifile.ini vpnhub.squashfs
