@@ -15,7 +15,6 @@
         "net-dns/dnsmasq",
         "net-libs/nodejs",
         "net-misc/dhcpcd",
-        "net-misc/ntp",
         "net-misc/s3cmd",
         "net-vpn/openvpn",
         "sys-block/zram-init",
