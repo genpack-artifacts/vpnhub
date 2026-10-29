@@ -3,4 +3,5 @@ work/
 *.cfg
 *.iso
 *.squashfs
+*.img
 .vscode/
