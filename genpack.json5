@@ -47,6 +47,7 @@
     ],
     accept_keywords:{
         "net-analyzer/snort": null,
+        ">=www-servers/caddy-2.11.7": null, // https://github.com/caddyserver/caddy/pull/7274
     },
     use:{
         "sys-apps/genpack-init": "exec-guard",
