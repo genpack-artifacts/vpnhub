@@ -57,7 +57,7 @@
         "app-misc/mime-types": "nginx",
         "net-libs/nodejs": "npm",
         "app-crypt/certbot": "certbot-dns-google certbot-dns-route53 certbot-dns-sakuracloud certbot-nginx",
-        "www-servers/caddy": "dns-cloudflare dns-googlecloudns dns-route53 dynamicdns"
+        "www-servers/caddy": "dns-cloudflare dns-googleclouddns dns-route53 dynamicdns"
     },
     license:{
         "net-analyzer/fping": "fping",
